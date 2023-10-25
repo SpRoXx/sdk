@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html class="docs-wrapper docs-doc-page docs-version-current plugin-docs plugin-id-default docs-doc-id-developers/sdk-documentation/game" dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="Docusaurus v2.4.1" name="generator"/>
+  <title data-rh="true">
+   Game | LegendSense Docs
+  </title>
+  <meta content="width=device-width,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="https://docs.legendsen.se/img/logo-240.png" data-rh="true" property="og:image"/>
+  <meta content="https://docs.legendsen.se/img/logo-240.png" data-rh="true" name="twitter:image"/>
+  <meta content="https://docs.legendsen.se/developers/sdk-documentation/game" data-rh="true" property="og:url"/>
+  <meta content="en" data-rh="true" name="docusaurus_locale"/>
+  <meta content="en" data-rh="true" name="docsearch:language"/>
+  <meta content="#e6465b" data-rh="true" name="theme-color"/>
+  <meta content="LegendSense Docs" data-rh="true" name="og:title"/>
+  <meta content="LegendSense is a fast and powerful scripting platform with incredible performance and lots of built-in content." data-rh="true" name="og:description"/>
+  <meta content="website" data-rh="true" name="og:type"/>
+  <meta content="https:://docs.legendsen.se" data-rh="true" name="og:url"/>
+  <meta content="LegendSense" data-rh="true" name="og:site_name"/>
+  <meta content="en_US" data-rh="true" name="og:locale"/>
+  <meta content="summary" data-rh="true" name="twitter:card"/>
+  <meta content="current" data-rh="true" name="docusaurus_version"/>
+  <meta content="docs-default-current" data-rh="true" name="docusaurus_tag"/>
+  <meta content="current" data-rh="true" name="docsearch:version"/>
+  <meta content="docs-default-current" data-rh="true" name="docsearch:docusaurus_tag"/>
+  <meta content="Game | LegendSense Docs" data-rh="true" property="og:title"/>
+  <meta content="Game info and functions." data-rh="true" name="description"/>
+  <meta content="Game info and functions." data-rh="true" property="og:description"/>
+  <link data-rh="true" href="/img/favicon.png" rel="icon"/>
+  <link data-rh="true" href="https://docs.legendsen.se/developers/sdk-documentation/game" rel="canonical"/>
+  <link data-rh="true" href="https://docs.legendsen.se/developers/sdk-documentation/game" hreflang="en" rel="alternate"/>
+  <link data-rh="true" href="https://docs.legendsen.se/developers/sdk-documentation/game" hreflang="x-default" rel="alternate"/>
+  <link href="/blog/rss.xml" rel="alternate" title="LegendSense Docs RSS Feed" type="application/rss+xml"/>
+  <link href="/blog/atom.xml" rel="alternate" title="LegendSense Docs Atom Feed" type="application/atom+xml"/>
+  <link href="/assets/css/styles.85fa2a88.css" rel="stylesheet"/>
+  <link as="script" href="/assets/js/runtime~main.47dc32c9.js" rel="preload"/>
+  <link as="script" href="/assets/js/main.b4185ef1.js" rel="preload"/>
+ </head>
+ <body class="navigation-with-keyboard">
+  <script>
+   !function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}return t}()||function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"dark")}()
+  </script>
+  <div id="__docusaurus">
+   <div aria-label="Skip to main content" role="region">
+    <a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">
+     Skip to main content
+    </a>
+   </div>
+   <nav aria-label="Main" class="navbar navbar--fixed-top">
+    <div class="navbar__inner">
+     <div class="navbar__items">
+      <button aria-expanded="false" aria-label="Toggle navigation bar" class="navbar__toggle clean-btn" type="button">
+       <svg aria-hidden="true" height="30" viewbox="0 0 30 30" width="30">
+        <path d="M4 7h22M4 15h22M4 23h22" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+      <a class="navbar__brand" href="/">
+       <div class="navbar__logo">
+        <img alt="LegendSense" class="themedImage_ToTc themedImage--light_HNdA" src="/img/logo.png"/>
+        <img alt="LegendSense" class="themedImage_ToTc themedImage--dark_i4oU" src="/img/logo.png"/>
+       </div>
+      </a>
+      <a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/legendsense/getting-started">
+       Docs
+      </a>
+      <a class="navbar__item navbar__link" href="/blog">
+       Blog
+      </a>
+     </div>
+     <div class="navbar__items navbar__items--right">
+      <div class="toggle_vylO colorModeToggle_DEke">
+       <button aria-label="Switch between dark and light mode (currently dark mode)" aria-live="polite" class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" disabled="" title="Switch between dark and light mode (currently dark mode)" type="button">
+        <svg class="lightToggleIcon_pyhR" height="24" viewbox="0 0 24 24" width="24">
+         <path d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" fill="currentColor">
+         </path>
+        </svg>
+        <svg class="darkToggleIcon_wfgR" height="24" viewbox="0 0 24 24" width="24">
+         <path d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z" fill="currentColor">
+         </path>
+        </svg>
+       </button>
+      </div>
+      <div class="searchBox_ZlJk">
+       <div class="navbar__search searchBarContainer_NW3z">
+        <input aria-label="Search" class="navbar__search-input" placeholder="Search"/>
+        <div class="loadingRing_RJI3 searchBarLoadingRing_YnHq">
+         <div>
+         </div>
+         <div>
+         </div>
+         <div>
+         </div>
+         <div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="navbar-sidebar__backdrop" role="presentation">
+    </div>
+   </nav>
+   <div class="main-wrapper mainWrapper_z2l0 docsWrapper_BCFX" id="__docusaurus_skipToContent_fallback">
+    <button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button">
+    </button>
+    <div class="docPage__5DB">
+     <aside class="theme-doc-sidebar-container docSidebarContainer_b6E3">
+      <div class="sidebarViewport_Xe31">
+       <div class="sidebar_njMd">
+        <nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG">
+         <ul class="theme-doc-sidebar-menu menu__list">
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a aria-expanded="true" class="menu__link menu__link--sublist" href="/">
+             LegendSense
+            </a>
+            <button aria-label="Toggle the collapsible sidebar category 'LegendSense'" class="clean-btn menu__caret" type="button">
+            </button>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/legendsense/getting-started" tabindex="0">
+              Getting Started
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/legendsense/troubleshooting" tabindex="0">
+              Troubleshooting
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item">
+             <a class="menu__link" href="/legendsense/compensations" tabindex="0">
+              How Compensations Work
+             </a>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist" href="/legendsense/evade/" tabindex="0">
+               Evade
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'Evade'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+            </li>
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="false" class="menu__link menu__link--sublist menu__link--sublist-caret" href="/legendsense/champions/fiora" tabindex="0">
+               Champions
+              </a>
+             </div>
+            </li>
+           </ul>
+          </li>
+          <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item">
+           <div class="menu__list-item-collapsible">
+            <a aria-expanded="true" class="menu__link menu__link--sublist menu__link--active" href="/developers/">
+             Developers
+            </a>
+            <button aria-label="Toggle the collapsible sidebar category 'Developers'" class="clean-btn menu__caret" type="button">
+            </button>
+           </div>
+           <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+            <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item">
+             <div class="menu__list-item-collapsible">
+              <a aria-expanded="true" class="menu__link menu__link--sublist menu__link--active" href="/developers/sdk-documentation/" tabindex="0">
+               SDK Documentation
+              </a>
+              <button aria-label="Toggle the collapsible sidebar category 'SDK Documentation'" class="clean-btn menu__caret" type="button">
+              </button>
+             </div>
+             <ul class="menu__list" style="display:block;overflow:visible;height:auto">
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/callback-args/" tabindex="0">
+                 Callback Args
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Callback Args'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/class/" tabindex="0">
+                 Classes
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Classes'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/enums/" tabindex="0">
+                 Enums
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Enums'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/library/" tabindex="0">
+                 Libraries
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Libraries'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/math/" tabindex="0">
+                 Math
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Math'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/renderer/" tabindex="0">
+                 Renderer
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'Renderer'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-3 menu__list-item menu__list-item--collapsed">
+               <div class="menu__list-item-collapsible">
+                <a aria-expanded="false" class="menu__link menu__link--sublist" href="/developers/sdk-documentation/sdk-types-and-functions/" tabindex="0">
+                 SDK Types &amp; Functions
+                </a>
+                <button aria-label="Toggle the collapsible sidebar category 'SDK Types &amp; Functions'" class="clean-btn menu__caret" type="button">
+                </button>
+               </div>
+              </li>
+              <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item">
+               <a class="menu__link" href="/developers/sdk-documentation/callback" tabindex="0">
+                CallbackType
+               </a>
+              </li>
+              <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item">
+               <a aria-current="page" class="menu__link menu__link--active" href="/developers/sdk-documentation/game" tabindex="0">
+                Game
+               </a>
+              </li>
+              <li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item">
+               <a class="menu__link" href="/developers/sdk-documentation/objectmanager" tabindex="0">
+                ObjectManager
+               </a>
+              </li>
+             </ul>
+            </li>
+           </ul>
+          </li>
+         </ul>
+        </nav>
+       </div>
+      </div>
+     </aside>
+     <main class="docMainContainer_gTbr">
+      <div class="container padding-top--md padding-bottom--lg">
+       <div class="row">
+        <div class="col docItemCol_VOVn">
+         <div class="docItemContainer_Djhp">
+          <article>
+           <nav aria-label="Breadcrumbs" class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl">
+            <ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+             <li class="breadcrumbs__item">
+              <a aria-label="Home page" class="breadcrumbs__link" href="/">
+               <svg class="breadcrumbHomeIcon_YNFT" viewbox="0 0 24 24">
+                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor">
+                </path>
+               </svg>
+              </a>
+             </li>
+             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="/developers/" itemprop="item">
+               <span itemprop="name">
+                Developers
+               </span>
+              </a>
+              <meta content="1" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <a class="breadcrumbs__link" href="/developers/sdk-documentation/" itemprop="item">
+               <span itemprop="name">
+                SDK Documentation
+               </span>
+              </a>
+              <meta content="2" itemprop="position"/>
+             </li>
+             <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+              <span class="breadcrumbs__link" itemprop="name">
+               Game
+              </span>
+              <meta content="3" itemprop="position"/>
+             </li>
+            </ul>
+           </nav>
+           <div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo">
+            <button class="clean-btn tocCollapsibleButton_TO0P" type="button">
+             On this page
+            </button>
+           </div>
+           <div class="theme-doc-markdown markdown">
+            <h1>
+             Game
+            </h1>
+            <p>
+             Game info and functions.
+            </p>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="properties">
+             Properties
+             <a aria-label="Direct link to Properties" class="hash-link" href="#properties" title="Direct link to Properties">
+              ​
+             </a>
+            </h2>
+            <h4 class="anchor anchorWithStickyNavbar_LWe7" id="localplayer-aiheroclient">
+             <code>
+              localPlayer
+             </code>
+             :
+             <a href="/developers/sdk-documentation/class/aiheroclient">
+              AIHeroClient
+             </a>
+             <a aria-label="Direct link to localplayer-aiheroclient" class="hash-link" href="#localplayer-aiheroclient" title="Direct link to localplayer-aiheroclient">
+              ​
+             </a>
+            </h4>
+            <h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">
+             Functions
+             <a aria-label="Direct link to Functions" class="hash-link" href="#functions" title="Direct link to Functions">
+              ​
+             </a>
+            </h2>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="getlatency">
+             GetLatency
+             <a aria-label="Direct link to GetLatency" class="hash-link" href="#getlatency" title="Direct link to GetLatency">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetLatency()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             number
+            </p>
+            <p>
+             Returns your current latency.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gettickcount">
+             GetTickCount
+             <a aria-label="Direct link to GetTickCount" class="hash-link" href="#gettickcount" title="Direct link to GetTickCount">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetTickCount()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             integer
+            </p>
+            <p>
+             Returns game tick count now.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gettime">
+             GetTime
+             <a aria-label="Direct link to GetTime" class="hash-link" href="#gettime" title="Direct link to GetTime">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetTime()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             number
+            </p>
+            <p>
+             Returns game clock time now.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="fnvhash">
+             fnvhash
+             <a aria-label="Direct link to fnvhash" class="hash-link" href="#fnvhash" title="Direct link to fnvhash">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.fnvhash(str: string)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             integer
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                str
+               </td>
+               <td align="left">
+                string
+               </td>
+               <td align="left">
+                String for calculate
+                <!-- -->
+                (
+                <!-- -->
+                case ignore
+                <!-- -->
+                )
+                <!-- -->
+                .
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns fnvhash of string.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="spelldatahash">
+             spelldataHash
+             <a aria-label="Direct link to spelldataHash" class="hash-link" href="#spelldatahash" title="Direct link to spelldataHash">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.spelldataHash(str: string)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             integer
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                str
+               </td>
+               <td align="left">
+                string
+               </td>
+               <td align="left">
+                String for calculate
+                <!-- -->
+                (
+                <!-- -->
+                case ignore
+                <!-- -->
+                )
+                <!-- -->
+                .
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns spelldataHash of string.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="translatestring">
+             TranslateString
+             <a aria-label="Direct link to TranslateString" class="hash-link" href="#translatestring" title="Direct link to TranslateString">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.TranslateString(str: string)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             string
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                str
+               </td>
+               <td align="left">
+                string
+               </td>
+               <td align="left">
+                String key to translate. You may use displayName value from
+                <a href="https://127.0.0.1:2999/liveclientdata/playerlist" rel="noopener noreferrer" target="_blank">
+                 https://127.0.0.1:2999/liveclientdata/playerlist
+                </a>
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns translated string.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gameid">
+             GameID
+             <a aria-label="Direct link to GameID" class="hash-link" href="#gameid" title="Direct link to GameID">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GameID()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             number
+            </p>
+            <p>
+             Returns game id.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gamemode">
+             GameMode
+             <a aria-label="Direct link to GameMode" class="hash-link" href="#gamemode" title="Direct link to GameMode">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GameMode()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             string
+            </p>
+            <p>
+             Returns game mode.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gametype">
+             GameType
+             <a aria-label="Direct link to GameType" class="hash-link" href="#gametype" title="Direct link to GameType">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GameType()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             string
+            </p>
+            <p>
+             Returns game type.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="ismatchmadegame">
+             IsMatchmadeGame
+             <a aria-label="Direct link to IsMatchmadeGame" class="hash-link" href="#ismatchmadegame" title="Direct link to IsMatchmadeGame">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IsMatchmadeGame()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <p>
+             Returns if game is not custom.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="region">
+             Region
+             <a aria-label="Direct link to Region" class="hash-link" href="#region" title="Direct link to Region">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.Region()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             string
+            </p>
+            <p>
+             Returns game region.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="mapid">
+             MapID
+             <a aria-label="Direct link to MapID" class="hash-link" href="#mapid" title="Direct link to MapID">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.MapID()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             integer
+            </p>
+            <p>
+             Returns game map id.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="mapname">
+             MapName
+             <a aria-label="Direct link to MapName" class="hash-link" href="#mapname" title="Direct link to MapName">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.MapName()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             string
+            </p>
+            <p>
+             Returns game map name.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="iswalloftype">
+             IsWallOfType
+             <a aria-label="Direct link to IsWallOfType" class="hash-link" href="#iswalloftype" title="Direct link to IsWallOfType">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IsWallOfType(pos: Vector2 or Vector3, flag: CellFlag, radius: number)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                pos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+                or
+                <a href="/developers/sdk-documentation/math/vector3">
+                 Vector3
+                </a>
+               </td>
+               <td align="left">
+                Check pos.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                flag
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/cellflag">
+                 CellFlag
+                </a>
+               </td>
+               <td align="left">
+                Flag for check.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                radius
+               </td>
+               <td align="left">
+                number
+               </td>
+               <td align="left">
+                Range for check.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns pos is wall of type wall.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="isinfow">
+             IsInFoW
+             <a aria-label="Direct link to IsInFoW" class="hash-link" href="#isinfow" title="Direct link to IsInFoW">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IsInFoW(pos: Vector3)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                pos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector3">
+                 Vector3
+                </a>
+               </td>
+               <td align="left">
+                Check pos.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns pos is in fow.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="getspellbyhash">
+             GetSpellByHash
+             <a aria-label="Direct link to GetSpellByHash" class="hash-link" href="#getspellbyhash" title="Direct link to GetSpellByHash">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetSpellByHash(spellHash: number)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/class/spell">
+              Spell
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                spellHash
+               </td>
+               <td align="left">
+                number - integer
+               </td>
+               <td align="left">
+                Spell hash.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Get Spelldata by spell hash.
+            </p>
+            <div class="language-lua codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36">
+             <div class="codeBlockTitle_Ktv7">
+              Example: Get spell data info value
+             </div>
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-lua codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">local</span><span class="token plain"> WSpell </span><span class="token operator">=</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetSpellByHash</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">spelldataHash</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"PickACard"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">-- You can get spelldata by hash</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> WSpell </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">then</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">local</span><span class="token plain"> sucusss</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain">value </span><span class="token operator">=</span><span class="token plain"> WSpell</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token function" style="color:rgb(80, 250, 123)">GetCalculateInfo</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">fnvhash</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token string" style="color:rgb(255, 121, 198)">"GoldBase"</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> W</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token function" style="color:rgb(80, 250, 123)">DataInstance</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">level</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">print</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">value</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" fill="currentColor">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" fill="currentColor">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="gethoveredunit">
+             GetHoveredUnit
+             <a aria-label="Direct link to GetHoveredUnit" class="hash-link" href="#gethoveredunit" title="Direct link to GetHoveredUnit">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetHoveredUnit()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/class/attackableunit">
+              AttackableUnit
+             </a>
+            </p>
+            <p>
+             Get target under our cursor.
+            </p>
+            <div class="language-lua codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36">
+             <div class="codeBlockTitle_Ktv7">
+              Example: Force target under our cursor.
+             </div>
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-lua codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Callback</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">Bind</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">CallbackType</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">OnTick</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">function</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">local</span><span class="token plain"> hover </span><span class="token operator">=</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetHoveredUnit</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    TargetSelector</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">SetForcedTarget</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">hover </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> hover</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token function" style="color:rgb(80, 250, 123)">IsValid</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> hover </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">or</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">nil</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" fill="currentColor">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" fill="currentColor">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="getselectedtarget">
+             GetSelectedTarget
+             <a aria-label="Direct link to GetSelectedTarget" class="hash-link" href="#getselectedtarget" title="Direct link to GetSelectedTarget">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetSelectedTarget()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/class/attackableunit">
+              AttackableUnit
+             </a>
+            </p>
+            <p>
+             Get manually selected (clicked) target.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="getcursorworldposition">
+             GetCursorWorldPosition
+             <a aria-label="Direct link to GetCursorWorldPosition" class="hash-link" href="#getcursorworldposition" title="Direct link to GetCursorWorldPosition">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.GetCursorWorldPosition()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector3">
+              Vector3
+             </a>
+            </p>
+            <p>
+             Get cursor world position
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="specialpathobstacle">
+             SpecialPathObstacle
+             <a aria-label="Direct link to SpecialPathObstacle" class="hash-link" href="#specialpathobstacle" title="Direct link to SpecialPathObstacle">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.SpecialPathObstacle(position: Vector2, radius: number)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/sdk-types-and-functions/specialpathobstacle">
+              SpecialPathObstacle
+             </a>
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                position
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Obstacle position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                radius
+               </td>
+               <td align="left">
+                number - float
+               </td>
+               <td align="left">
+                Obstacle radius.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Create obstacle instance to be used with CreateSpecialPath
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createpath">
+             CreatePath
+             <a aria-label="Direct link to CreatePath" class="hash-link" href="#createpath" title="Direct link to CreatePath">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreatePath(startPos: Vector2, endPos: Vector2, bSmoothPath: boolean)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                startPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Start position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                bSmoothPath
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. Recommended to use true.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns calculated path from given start position to given end position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createpath-1">
+             CreatePath
+             <a aria-label="Direct link to CreatePath" class="hash-link" href="#createpath-1" title="Direct link to CreatePath">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreatePath(startPos: Vector3, endPos: Vector3, bSmoothPath: boolean)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                startPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector3">
+                 Vector3
+                </a>
+               </td>
+               <td align="left">
+                Start position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector3">
+                 Vector3
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                bSmoothPath
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. Recommended to use true.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns calculated path from given start position to given end position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createpath-2">
+             CreatePath
+             <a aria-label="Direct link to CreatePath" class="hash-link" href="#createpath-2" title="Direct link to CreatePath">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreatePath(endPos: Vector2, bSmoothPath: boolean)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                bSmoothPath
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. Recommended to use true.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns calculated path from player position to given end position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createpath-3">
+             CreatePath
+             <a aria-label="Direct link to CreatePath" class="hash-link" href="#createpath-3" title="Direct link to CreatePath">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreatePath(endPos: Vector2, bSmoothPath: boolean)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                bSmoothPath
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. Recommended to use true.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns calculated path from player position to given end position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createspecialpath">
+             CreateSpecialPath
+             <a aria-label="Direct link to CreateSpecialPath" class="hash-link" href="#createspecialpath" title="Direct link to CreateSpecialPath">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreateSpecialPath(
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              startPos: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              endPos: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              includeAllies?: boolean,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              rangeFilter?: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              extraCollisionRadius?: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              excludeObjectHandles?: table,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              smoothPath?: boolean
+             </code>
+             <br/>
+             <code>
+              )
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                startPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Start position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                includeAllies?
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Include friendly units or not. False by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                rangeFilter?
+               </td>
+               <td align="left">
+                number - float
+               </td>
+               <td align="left">
+                Add "fake walls" only to units within this range from start position. 500 by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                extraCollisionRadius?
+               </td>
+               <td align="left">
+                number - float
+               </td>
+               <td align="left">
+                Extra pathfinding collision radius. 0 by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                excludeObjectHandles?
+               </td>
+               <td align="left">
+                table - std::unordered_set
+                <!-- -->
+                &lt;
+                <!-- -->
+                unsigned
+                <!-- -->
+                &gt;
+               </td>
+               <td align="left">
+                Handle list of all objects you want to exclude.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                smoothPath?
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. True by default.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns special calculated path from given start position to given end position, but it adds "fake walls" under each minion and hero within given range.
+            </p>
+            <div class="language-lua codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36">
+             <div class="codeBlockTitle_Ktv7">
+              Example: Get special path from player position to cursor. Useful for movement checks inside groups of minions and close to heroes.
+             </div>
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-lua codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Callback</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">Bind</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">CallbackType</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">OnDraw</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">function</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token comment" style="color:rgb(98, 114, 164)">-- Example 1: Basic usage with friendly units, 1000 rangeFilter:</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token comment" style="color:rgb(98, 114, 164)">-- local path = Game.CreateSpecialPath(Game.localPlayer.position2D, Game.GetCursorWorldPosition():To2D(), true, 1000)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token comment" style="color:rgb(98, 114, 164)">-- Example 2: include friendly units, 1000 rangeFilter, add 100 extra collision radius and ignore currently selected target:</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">local</span><span class="token plain"> path </span><span class="token operator">=</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">CreateSpecialPath</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">localPlayer</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">position2D</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetCursorWorldPosition</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token function" style="color:rgb(80, 250, 123)">To2D</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">true</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">1000</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">100</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetSelectedTarget</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetSelectedTarget</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">handle </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">or</span><span class="token plain"> </span><span class="token number">0</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> path </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> </span><span class="token operator">#</span><span class="token plain">path </span><span class="token operator">&gt;</span><span class="token plain"> </span><span class="token number">0</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">then</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        Renderer</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">DrawVectorPoly</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">path</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">1</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">0xFFFFFFFF</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">-- Draw full path (overload with std::vector&lt;Vector2&gt; argument)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" fill="currentColor">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" fill="currentColor">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="createspecialpathex">
+             CreateSpecialPathEx
+             <a aria-label="Direct link to CreateSpecialPathEx" class="hash-link" href="#createspecialpathex" title="Direct link to CreateSpecialPathEx">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CreateSpecialPathEx(
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              startPos: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              endPos: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              customObstacles?: table,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              includeObjectTypes?: table,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              includeAllies?: boolean,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              rangeFilter?: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              extraCollisionRadius?: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              excludeObjectHandles?: table,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              smoothPath?: boolean
+             </code>
+             <br/>
+             <code>
+              )
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             [] - std::vector
+             <!-- -->
+             &lt;
+             <a href="/developers/sdk-documentation/math/vector2">
+              Vector2
+             </a>
+             &gt;
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                startPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Start position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                endPos
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                End position.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                customObstacles?
+               </td>
+               <td align="left">
+                table - std::vector
+                <!-- -->
+                &lt;
+                <a href="/developers/sdk-documentation/sdk-types-and-functions/specialpathobstacle">
+                 SpecialPathObstacle
+                </a>
+                &gt;
+               </td>
+               <td align="left">
+                A list of custom obstacles.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                includeObjectTypes?
+               </td>
+               <td align="left">
+                table - std::unordered_set
+                <!-- -->
+                &lt;
+                <a href="/developers/sdk-documentation/enums/objecttype">
+                 ObjectType
+                </a>
+                &gt;
+               </td>
+               <td align="left">
+                A list of all game object types you want to include.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                includeAllies?
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Include friendly units or not. False by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                rangeFilter?
+               </td>
+               <td align="left">
+                number - float
+               </td>
+               <td align="left">
+                Add "fake walls" only to units within this range from start position. 500 by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                extraCollisionRadius?
+               </td>
+               <td align="left">
+                number - float
+               </td>
+               <td align="left">
+                Extra pathfinding collision radius. 0 by default.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                excludeObjectHandles?
+               </td>
+               <td align="left">
+                table - std::unordered_set
+                <!-- -->
+                &lt;
+                <!-- -->
+                unsigned
+                <!-- -->
+                &gt;
+               </td>
+               <td align="left">
+                Handle list of all objects you want to exclude.
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                smoothPath?
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Return smooth path. True by default.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns special calculated path from given start position to given end position, but it adds "fake walls" under selected objects and custom obstacles.
+            </p>
+            <div class="language-lua codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36">
+             <div class="codeBlockTitle_Ktv7">
+              Example: Get special path from player position to cursor. Useful for movement checks inside groups of minions and close to heroes.
+             </div>
+             <div class="codeBlockContent_biex">
+              <pre class="prism-code language-lua codeBlock_bY9V thin-scrollbar" tabindex="0"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Callback</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">Bind</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">CallbackType</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">OnDraw</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">function</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">local</span><span class="token plain"> path </span><span class="token operator">=</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">CreateSpecialPathEx</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">localPlayer</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">position2D</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetCursorWorldPosition</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token function" style="color:rgb(80, 250, 123)">To2D</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">SpecialPathObstacle</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">localPlayer</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">position2D </span><span class="token operator">+</span><span class="token plain"> Math</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">Vector2</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token number">500</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">0</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">100</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">            Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">SpecialPathObstacle</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">TurretTracker</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetClosestAllyTurretPosition</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">500</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> ObjectType</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">AIHeroClient</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> ObjectType</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">AIMinionClient </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">true</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token number">1000</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token number">400</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetSelectedTarget</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> Game</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">GetSelectedTarget</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token plain">handle </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">or</span><span class="token plain"> </span><span class="token number">0</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">if</span><span class="token plain"> path </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">and</span><span class="token plain"> </span><span class="token operator">#</span><span class="token plain">path </span><span class="token operator">&gt;</span><span class="token plain"> </span><span class="token number">0</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">then</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">        Renderer</span><span class="token punctuation" style="color:rgb(248, 248, 242)">.</span><span class="token function" style="color:rgb(80, 250, 123)">DrawVectorPoly</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token plain">path</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">1</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token number">0xFFFFFFFF</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> </span><span class="token comment" style="color:rgb(98, 114, 164)">-- Draw full path (overload with std::vector&lt;Vector2&gt; argument)</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><span class="token plain"></span><br/></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">end</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><br/></span></code></pre>
+              <div class="buttonGroup__atx">
+               <button aria-label="Copy code to clipboard" class="clean-btn" title="Copy" type="button">
+                <span aria-hidden="true" class="copyButtonIcons_eSgA">
+                 <svg class="copyButtonIcon_y97N" viewbox="0 0 24 24">
+                  <path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" fill="currentColor">
+                  </path>
+                 </svg>
+                 <svg class="copyButtonSuccessIcon_LjdS" viewbox="0 0 24 24">
+                  <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" fill="currentColor">
+                  </path>
+                 </svg>
+                </span>
+               </button>
+              </div>
+             </div>
+            </div>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="issueorder">
+             IssueOrder
+             <a aria-label="Direct link to IssueOrder" class="hash-link" href="#issueorder" title="Direct link to IssueOrder">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IssueOrder(orderType: IssueOrderType)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                orderType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/issueordertype">
+                 IssueOrderType
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Issue order in safe way.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="issueorder-1">
+             IssueOrder
+             <a aria-label="Direct link to IssueOrder" class="hash-link" href="#issueorder-1" title="Direct link to IssueOrder">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IssueOrder(orderType: IssueOrderType, position: Vector2)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                orderType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/issueordertype">
+                 IssueOrderType
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                position
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Issue order in safe way to a position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="issueorder-2">
+             IssueOrder
+             <a aria-label="Direct link to IssueOrder" class="hash-link" href="#issueorder-2" title="Direct link to IssueOrder">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IssueOrder(orderType: IssueOrderType, position: Vector3)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                orderType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/issueordertype">
+                 IssueOrderType
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                position
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector3">
+                 Vector3
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Issue order in safe way to a position.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="issueorder-3">
+             IssueOrder
+             <a aria-label="Direct link to IssueOrder" class="hash-link" href="#issueorder-3" title="Direct link to IssueOrder">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IssueOrder(orderType: IssueOrderType, target: AttackableUnit)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                orderType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/issueordertype">
+                 IssueOrderType
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                target
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/class/attackableunit">
+                 AttackableUnit
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Issue order in safe way to a target.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="doemote">
+             DoEmote
+             <a aria-label="Direct link to DoEmote" class="hash-link" href="#doemote" title="Direct link to DoEmote">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.DoEmote(emoteType: Emote)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             void
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                emoteType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/emote">
+                 Emote
+                </a>
+               </td>
+               <td align="left">
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Perform emote.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sendchat">
+             SendChat
+             <a aria-label="Direct link to SendChat" class="hash-link" href="#sendchat" title="Direct link to SendChat">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.SendChat(msg: string)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             void
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                msg
+               </td>
+               <td align="left">
+                string
+               </td>
+               <td align="left">
+                Message to be sent. Use /all prefix if you want to send to All Chat.
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Send chat message.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="sendping">
+             SendPing
+             <a aria-label="Direct link to SendPing" class="hash-link" href="#sendping" title="Direct link to SendPing">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.SendPing(
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              targetNetworkID: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              position: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              pingType: PingType
+             </code>
+             <br/>
+             <code>
+              )
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             void
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                targetNetworkID
+               </td>
+               <td align="left">
+                number - integer
+               </td>
+               <td align="left">
+                Network ID of the target to ping
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                position
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Positiong to ping
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                pingType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/pingtype">
+                 PingType
+                </a>
+               </td>
+               <td align="left">
+                Used ping type
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Send ping.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="showping">
+             ShowPing
+             <a aria-label="Direct link to ShowPing" class="hash-link" href="#showping" title="Direct link to ShowPing">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.ShowPing(
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              sourceHandle: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              targetHandle: number,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              position: Vector2,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              pingType: PingType,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              isPlaySound: boolean,
+             </code>
+             <br/>
+             <!-- -->
+             <code>
+              isTriggerEvent: boolean
+             </code>
+             <br/>
+             <code>
+              )
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             void
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                sourceHandle
+               </td>
+               <td align="left">
+                number - integer
+               </td>
+               <td align="left">
+                Ping source handle
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                targetHandle
+               </td>
+               <td align="left">
+                number - integer
+               </td>
+               <td align="left">
+                Pinged target handle
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                position
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/math/vector2">
+                 Vector2
+                </a>
+               </td>
+               <td align="left">
+                Pinged position
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                pingType
+               </td>
+               <td align="left">
+                <a href="/developers/sdk-documentation/enums/pingtype">
+                 PingType
+                </a>
+               </td>
+               <td align="left">
+                Used ping type
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                isPlaySound
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Play sound or not
+               </td>
+              </tr>
+              <tr>
+               <td align="left">
+                isTriggerEvent
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Trigger event or not
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Show ping locally.
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="iscameralocked">
+             IsCameraLocked
+             <a aria-label="Direct link to IsCameraLocked" class="hash-link" href="#iscameralocked" title="Direct link to IsCameraLocked">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.IsCameraLocked()
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             boolean
+            </p>
+            <p>
+             Returns if camera is locked
+            </p>
+            <hr/>
+            <h3 class="anchor anchorWithStickyNavbar_LWe7" id="cameralocktoggle">
+             CameraLockToggle
+             <a aria-label="Direct link to CameraLockToggle" class="hash-link" href="#cameralocktoggle" title="Direct link to CameraLockToggle">
+              ​
+             </a>
+            </h3>
+            <p>
+             <code>
+              Game.CameraLockToggle(state: boolean)
+             </code>
+             <!-- -->
+             →
+             <!-- -->
+             void
+            </p>
+            <table>
+             <thead>
+              <tr>
+               <th align="left">
+                Argument
+               </th>
+               <th align="left">
+                Type
+               </th>
+               <th align="left">
+                Description
+               </th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td align="left">
+                state
+               </td>
+               <td align="left">
+                boolean
+               </td>
+               <td align="left">
+                Lock state
+               </td>
+              </tr>
+             </tbody>
+            </table>
+            <p>
+             Returns if camera is locked
+            </p>
+            <hr/>
+           </div>
+          </article>
+          <nav aria-label="Docs pages" class="pagination-nav docusaurus-mt-lg">
+           <a class="pagination-nav__link pagination-nav__link--prev" href="/developers/sdk-documentation/callback">
+            <div class="pagination-nav__sublabel">
+             Previous
+            </div>
+            <div class="pagination-nav__label">
+             CallbackType
+            </div>
+           </a>
+           <a class="pagination-nav__link pagination-nav__link--next" href="/developers/sdk-documentation/objectmanager">
+            <div class="pagination-nav__sublabel">
+             Next
+            </div>
+            <div class="pagination-nav__label">
+             ObjectManager
+            </div>
+           </a>
+          </nav>
+         </div>
+        </div>
+        <div class="col col--3">
+         <div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop">
+          <ul class="table-of-contents table-of-contents__left-border">
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#properties">
+             Properties
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#localplayer-aiheroclient">
+               <code>
+                localPlayer
+               </code>
+               : AIHeroClient
+              </a>
+             </li>
+            </ul>
+           </li>
+           <li>
+            <a class="table-of-contents__link toc-highlight" href="#functions">
+             Functions
+            </a>
+            <ul>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#getlatency">
+               GetLatency
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gettickcount">
+               GetTickCount
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gettime">
+               GetTime
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#fnvhash">
+               fnvhash
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#spelldatahash">
+               spelldataHash
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#translatestring">
+               TranslateString
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gameid">
+               GameID
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gamemode">
+               GameMode
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gametype">
+               GameType
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#ismatchmadegame">
+               IsMatchmadeGame
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#region">
+               Region
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#mapid">
+               MapID
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#mapname">
+               MapName
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#iswalloftype">
+               IsWallOfType
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#isinfow">
+               IsInFoW
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#getspellbyhash">
+               GetSpellByHash
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#gethoveredunit">
+               GetHoveredUnit
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#getselectedtarget">
+               GetSelectedTarget
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#getcursorworldposition">
+               GetCursorWorldPosition
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#specialpathobstacle">
+               SpecialPathObstacle
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createpath">
+               CreatePath
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createpath-1">
+               CreatePath
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createpath-2">
+               CreatePath
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createpath-3">
+               CreatePath
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createspecialpath">
+               CreateSpecialPath
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#createspecialpathex">
+               CreateSpecialPathEx
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#issueorder">
+               IssueOrder
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#issueorder-1">
+               IssueOrder
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#issueorder-2">
+               IssueOrder
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#issueorder-3">
+               IssueOrder
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#doemote">
+               DoEmote
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sendchat">
+               SendChat
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#sendping">
+               SendPing
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#showping">
+               ShowPing
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#iscameralocked">
+               IsCameraLocked
+              </a>
+             </li>
+             <li>
+              <a class="table-of-contents__link toc-highlight" href="#cameralocktoggle">
+               CameraLockToggle
+              </a>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </main>
+    </div>
+   </div>
+   <footer class="footer">
+    <div class="container container-fluid">
+     <div class="row footer__links">
+      <div class="col footer__col">
+       <div class="footer__title">
+        Docs
+       </div>
+       <ul class="footer__items clean-list">
+        <li class="footer__item">
+         <a class="footer__link-item" href="/developers/sdk-documentation">
+          SDK Documentation
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col footer__col">
+       <div class="footer__title">
+        Explore
+       </div>
+       <ul class="footer__items clean-list">
+        <li class="footer__item">
+         <a class="footer__link-item" href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="footer__item">
+         <a class="footer__link-item" href="https://legendsen.se" rel="noopener noreferrer" target="_blank">
+          Forum
+          <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+           <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+           </path>
+          </svg>
+         </a>
+        </li>
+        <li class="footer__item">
+         <a class="footer__link-item" href="https://shop.legendsen.se" rel="noopener noreferrer" target="_blank">
+          Shop
+          <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+           <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+           </path>
+          </svg>
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="col footer__col">
+       <div class="footer__title">
+        More
+       </div>
+       <ul class="footer__items clean-list">
+        <li class="footer__item">
+         <a class="footer__link-item" href="https://legendsen.se/discord" rel="noopener noreferrer" target="_blank">
+          Discord Chat
+          <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+           <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+           </path>
+          </svg>
+         </a>
+        </li>
+        <li class="footer__item">
+         <a class="footer__link-item" href="https://www.elitepvpers.com/" rel="noopener noreferrer" target="_blank">
+          EPVP
+          <svg aria-hidden="true" class="iconExternalLink_nPIU" height="13.5" viewbox="0 0 24 24" width="13.5">
+           <path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z" fill="currentColor">
+           </path>
+          </svg>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom text--center">
+      <div class="footer__copyright">
+       LegendSense — 2023
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script src="/assets/js/runtime~main.47dc32c9.js">
+  </script>
+  <script src="/assets/js/main.b4185ef1.js">
+  </script>
+  <script>
+   function removeTrailingSlash(){if(window.location.pathname.endsWith("/")){const i=window.location.pathname.slice(0,-1)+window.location.search+window.location.hash;history.replaceState({},document.title,i)}}removeTrailingSlash()
+  </script>
+ </body>
+</html>
